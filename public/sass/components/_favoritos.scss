@@ -1,0 +1,49 @@
+.section-favoritos {
+    padding: 4em 2em;
+    font-size: 14px;
+    user-select: none;
+    overflow-y: auto;
+    display: none;
+    position: fixed;   
+    z-index: 1;
+    top: 150px;
+    left: 50px;
+    right: 50px;
+    bottom: 100px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    @media (max-width: 768px) {
+        left: 20px;
+        right: 20px;        
+    }
+
+    &--visible {
+        display: block;
+    }    
+
+    table {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    table,th,td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px 15px;
+    }
+
+    table button {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 50px;
+        height: 35px;
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    
+
+}

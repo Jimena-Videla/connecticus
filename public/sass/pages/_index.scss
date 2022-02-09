@@ -1,0 +1,17 @@
+.section-cards__header {
+    // border: 1px solid blue;
+    margin: 2em 1em;
+    display: flex;
+    
+    h1,
+    h2 {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+    }
+    
+    h2 {
+        padding-left: 10px;       
+    }
+}

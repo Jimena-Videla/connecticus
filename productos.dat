@@ -1,0 +1,20 @@
+[
+	{
+		"nombre": "TV 55",
+		"descripcion": "Smart TV 55 Pulgadas",
+		"precio": 55555,
+		"id": 1
+	},
+	{
+		"nombre": "TV 44",
+		"descripcion": "Smart TV 44 Pulgadas",
+		"precio": 44444,
+		"id": "4"
+	},
+	{
+		"nombre": "TV 33",
+		"descripcion": "Smart TV 33 Pulgadas",
+		"precio": 33333,
+		"id": 5
+	}
+]

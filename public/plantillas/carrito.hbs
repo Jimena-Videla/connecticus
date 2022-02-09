@@ -1,0 +1,50 @@
+{{#if carrito.length }}     
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Marca</th>
+            <th>Foto</th>
+            <th>Cantidad</th>
+            <th>Oferta</th>
+            <th>Envio</th>
+            <th>Acción</th>
+        </tr>
+        {{#each carrito}}
+            <tr>
+                <td>{{nombre}}</td>
+                <td>{{precio}}</td>
+                <td>{{marca}}</td>
+                <td>
+                    <img style="display:block; margin: 0 auto;" src="{{foto}}" width="50" alt="{{nombre}}"> 
+                </td>
+                <td>{{cantidad}}</td>
+
+                {{#if oferta}}
+                    <td>Si</td>
+                {{else}}
+                    <td>No</td>
+                {{/if}}
+
+                {{#if envio}}
+                    <td>Si</td>
+                {{else}}
+                    <td>No</td>
+                {{/if}}
+                <td>
+                    <button onclick="carritoController.borrarProductoCarrito('{{id}}')" title=""><i class="icon-trash"></i></button>
+                </td>
+            </tr>
+        {{/each}}
+    </table>  
+    <div class="carrito-final"> 
+        <div class="totales">
+            <span>Click para calcular el total 👉</span>
+            <button onclick="carritoController.calcularTotal()">Calcular</button> 
+            <span id="total"></span>
+        </div>        
+        <button class="btn__enviarCarrito" onclick="carritoController.enviarCarrito()">Enviar</button>    
+    </div> 
+{{else}}    
+    <h2>El carrito está vacío</h2>
+{{/if}}

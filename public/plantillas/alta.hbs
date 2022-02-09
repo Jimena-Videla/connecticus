@@ -1,0 +1,70 @@
+{{#if validos}}
+    <td>Válido</td>
+{{else}}      
+    <td>No válido</td>
+{{/if}}
+
+{{#if productos.length}}
+
+    <table>
+        <tr>
+            {{!-- <th>ID</th> --}}
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Marca</th>
+            <th>Categoria</th>
+            <th>Detalles</th>
+            <th>Foto</th>
+            <th>Oferta</th>
+            <th>Envio</th>
+            <th>Acción</th>
+        </tr>
+
+        {{#each productos}}       
+            <tr> 
+                {{!-- <td data-label="ID">{{id}}</td> --}}
+                <td data-label="Nombre">{{nombre}}</td>
+                <td data-label="Descripción">{{descripcion}}</td>
+                <td data-label="Precio">{{precio}}</td>
+                <td data-label="Stock">{{stock}}</td>
+                <td data-label="Marca">{{marca}}</td>
+                <td data-label="Categoria">{{categoria}}</td>
+                <td data-label="Detalles">{{detalles}}</td>
+                
+                <td data-label="Foto">
+                    <img src={{foto}} alt="foto de {{nombre}}">
+                </td>                
+
+                {{#if oferta}}
+                    <td data-label="Oferta">Si</td>   
+                {{else}}         
+                    <td data-label="Oferta">No</td>   
+                {{/if}}
+                
+                {{#if envio}}
+                    <td data-label="Envio">Si</td>   
+                {{else}}         
+                    <td data-label="Envio">No</td>   
+                {{/if}}
+
+                <td data-label="Accion">
+                    <div class="buttons">
+                        {{#if ../validos}}
+                            <button  onclick="productoController.actualizarProducto('{{id}}')">Actualizar</button>
+                        {{else}}         
+                            <button class="disabled" disabled onclick="productoController.actualizarProducto('{{id}}')">Actualizar</button>
+                        {{/if}}
+                        <button onclick="productoController.borrarProducto('{{id}}')">Borrar</button>
+                    </div>
+                </td>
+            </tr>
+        
+        {{/each}}
+
+    </table>
+
+{{else}}
+    <h3>No se encontraron productos</h3>
+{{/if}}

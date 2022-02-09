@@ -1,0 +1,101 @@
+{{#if listado.length }}
+    {{#each listado}}    
+
+    <article class="card__article">     
+        
+        <div class="card">
+        
+            {{!-- CARD 1 FRONT --}}
+            <div class="card-front">
+                
+                <div class="card-front__header">
+                    <h3>{{nombre}}</h3>
+                </div>
+                
+                <div class="card-front__image" style="background-image: url('{{foto}}');">
+                    {{#if oferta}}  
+                    <img class="card-front__image" src="/img/oferta1.png" alt="Oferta">                    
+                    {{/if}}                       
+                </div>
+                
+                <div class="card-front__links">
+
+                    <div class="button">
+                        <div class="icon">
+                            <div class="carrito"><i class="icon-cart-plus"></i></div>                 
+                        </div>
+                        <span onclick="agregarCarrito(event,'{{id}}',this)">Lo quiero!</span>
+                    </div>
+
+                    <div class="button">
+                        <div class="icon">
+                            <div class="favoritos"><i class="icon-heart-empty"></i></div>                            
+                        </div>
+                        <span onclick="agregarFavoritos(event,'{{id}}',this)">Favoritos</span>
+                    </div>
+
+                    <div class="button">
+                        <div class="icon">
+                            <div class="compartir"><i class="icon-share"></i></div>                                                            
+                        </div>
+                        <span>Compartir</span>
+                    </div>
+
+                </div> 
+                
+                <div class="card-front__content">
+                    
+                    <div class="card-front__precio">
+                        <span>$ {{precio}}</span>                                
+                    </div>      
+
+                    <div class="card-front__envio"> 
+                        {{#if envio}}                   
+                        <i class="icon-truck"></i>
+                        {{/if}}
+                    </div> 
+                    
+                    <div class="card-front__vinculo-girar" onclick="girarCard('{{id}}')">                            
+                        <i class="icon-right-circle"></i>
+                    </div> 
+                                                                                                
+                </div>                            
+            </div>
+                
+                
+            {{!-- CARD 1 BACK --}}
+            <div class="card-back">
+                <h3 class="card-back__header">{{nombre}}</h3>
+                <div class="card-back__description">
+                    <p>
+                        {{descripcion}}
+                    </p>                   
+                </div> 
+                
+                <div class="card-back__vinculos">                        
+                    <div class="card-back__vinculo-mas" onclick="mostrarDetalles('{{id}}')">
+                        <i class="icon-plus-circle"></i>
+                    </div>   
+                    
+                    <div class="card-back__vinculo-girar" onclick="girarCard('{{id}}')">                            
+                        <i class="icon-left-circle"></i>
+                    </div>                         
+                </div> 
+
+
+            </div>     
+            
+        </div>        
+        <div class="card-detalles">
+            <div class="card-detalles__cerrar" onclick="cerrarDetalles('{{id}}')">
+                <i class="icon-cancel-circled" ></i>
+            </div>
+            <div>{{detalles}}</div>
+        </div>                
+    
+    </article>
+
+    {{/each}}
+{{else}}
+    <h2>No se encontraron productos</h2>
+{{/if}}

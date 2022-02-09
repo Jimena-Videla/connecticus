@@ -1,0 +1,141 @@
+<main class="main__alta" >      
+
+    <div class="container-alta">
+        
+        <form class="form-container__alta-producto" action="alta.php" method="post" autocomplete="off">
+            <h1>Alta</h1>
+
+            <!-- campo nombre -->
+            <div class="campo-nombre">                    
+                <label class="alta-label" for="nombre-alta">Nombre:<sup>*</sup></label>
+                <input type="text" id="nombre-alta" class="input-alta" name="nombre-alta" maxlength="20" placeholder="Máximo 20 caracteres" autofocus required>
+                <div class="mensaje-alta"></div>                
+            </div>
+
+            <!-- campo descripción -->
+            <div class="campo-descripcion">
+                <label class="alta-label" for="descripcion-alta">Descripción:<sup>*</sup></label>
+                <textarea id="descripcion-alta" class="input-alta" name="descripcion-alta" maxlength="456" placeholder="Máximo 456 catacteres"></textarea>
+                <div class="mensaje-alta"></div>                
+            </div>
+
+            <!-- campo precio -->
+            <div class="campo-precio">
+                <label class="precio-label" for="precio-alta">Precio:<sup>*</sup></label>
+                <input type="text" id="precio-alta" class="input-alta" name="precio-alta" placeholder="Ingrese un valor" required>
+                <div class="mensaje-alta"></div>                
+            </div>
+            
+            <!-- campo stock -->
+            <div class="campo-stock">
+                <label class="stock-label" for="stock-alta">Stock:<sup>*</sup></label>
+                <input type="text" id="stock-alta" class="input-alta" name="stock-alta" placeholder="Ingrese un valor" required>
+                <div class="mensaje-alta"></div>                
+            </div>  
+
+            <!-- campo marca -->
+            <div class="campo-marca">
+                <label class="marca-label" for="marca-alta">Marca:<sup>*</sup></label>
+                <select id="marca-alta" class="input-alta" required>
+                    <option value="">Seleccioná una opción</option>       
+                    <option value="Apple-1">Apple</option>
+                    <option value="Canon-2">Canon</option>
+                    <option value="DHG-3">DHG</option>
+                    <option value="DJI-4">DJI</option>
+                    <option value="Google-5">Google</option>
+                    <option value="JBL-6">JBL</option>
+                    <option value="Lenovo-7">Lenovo</option>
+                    <option value="LG-8">LG</option>
+                    <option value="Motorola-9">Motorola</option>
+                    <option value="Playstation-10">Playstation</option>
+                    <option value="Samsung-11">Samsung</option>
+                    <option value="Samsung-Galaxi-12">Samsung Galaxy</option>
+                    <option value="Sony-13">Sony</option>      
+                </select>
+                <div class="mensaje-alta"></div>                
+            </div>
+        
+            <!-- campo categoría -->
+            <div class="campo-categoria">                
+                <label class="categoria-label" for="categoria-alta">Categoria:<sup>*</sup></label>
+                <select id="categoria-alta" class="input-alta" required>
+                    <option value="">Seleccioná una opción</option>
+                    <optgroup label="Electrodomesticos">
+                        <option value="Lavarropas-19">Lavarropas</option>            
+                    </optgroup>
+                    <optgroup label="Tecnología">
+                        <option value="celulares-20">Celulares</option>
+                        <option value="audio-21">Audio</option>
+                        <option value="Notebooks-22">Notebooks</option>
+                        <option value="Tv-23">Tv Led, Smart Tv</option>
+                        <option value="Camaras-24">Camaras Digitales</option>
+                        <option value="Gaming-25">Gaming</option>
+                        <option value="Drones-26">Drones</option>
+                    </optgroup>
+                </select>
+                <div class="mensaje-alta"></div>                
+            </div>  
+
+            <!-- campo detalles -->
+            <div class="campo-detalles">
+                <label class="alta-label" for="detalles-alta">Más detalles:<sup>*</sup></label>
+                <textarea id="detalles-alta" class="input-alta" name="detalles-alta" placeholder="Detalle su producto"></textarea>
+                <div class="mensaje-alta"></div>                
+            </div>        
+
+            <div class="campo-foto">          
+
+                <label for="foto">Foto: <br>Click aquí <i class="icon-picture-1"></i> ó</label>
+                <progress id="progress-bar" max="100" value="0"></progress>
+
+                <div id="drop-area">    
+                    
+                    <input id="foto" type="file" accept="image/*" onchange="formularioAlta.handleFiles(this.files)">
+                                    
+                    <div id="gallery">                        
+                        <img src="" alt="">
+                    </div>
+
+                </div>  
+                
+            </div>
+
+            <!--  ---- checks ----- -->
+            <div class="checks">
+                
+                <!-- campo oferta -->     
+                <div class="campo-oferta">
+                    <input type="checkbox" id="check-oferta" class="input-alta">    
+                    <label class="check-alta" for="check-oferta">Oferta</label>
+                </div>       
+                
+                <!-- campo envio -->     
+                <div class="campo-envio">
+                    <input type="checkbox" id="check-envio" class="input-alta">    
+                    <label class="check-alta" for="check-envio">Envio sin cargo</label>
+                </div>       
+                                                    
+                <h2 id="campo-obligatorio"><sup>*</sup>Campo obligatorio</h2>
+                
+            </div>   
+            
+            <!-- boton enviar -->                    
+            <div class="alta-submit">
+                <input id="boton-alta-enviar" class="boton-alta-enviar" type="submit">
+            </div>
+                
+                
+        </form>
+
+    </div>           
+
+        <!-- ------------------------------------------------------------------- -->
+        
+    <h1 class="listado">Listado de productos</h1>
+        
+    <div id="listado-productos"></div>       
+    
+</main>   
+    
+
+

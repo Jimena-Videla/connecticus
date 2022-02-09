@@ -1,0 +1,41 @@
+{{#if favoritos.length }} 
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Marca</th>
+            <th>Foto</th>                        
+            <th>Oferta</th>
+            <th>Envio</th>
+            <th>Acción</th>
+        </tr>
+        {{#each favoritos}}
+            <tr>
+                <td>{{nombre}}</td>
+                <td>{{precio}}</td>
+                <td>{{marca}}</td>
+                <td>
+                    <img style="display:block; margin: 0 auto;" src="{{foto}}" width="50" alt="{{nombre}}"> 
+                </td>               
+
+                {{#if oferta}}
+                    <td>Si</td>
+                {{else}}
+                    <td>No</td>
+                {{/if}}
+
+                {{#if envio}}
+                    <td>Si</td>
+                {{else}}
+                    <td>No</td>
+                {{/if}}
+                <td>
+                    <button onclick="favoritosController.borrarProductoFavoritos('{{id}}')" title="Borrar"><i class="icon-trash"></i></button>
+                    <button onclick="favoritosController.enviarAlCarrito('{{id}}')" title="Agregar al carrito"><i class="icon-cart-plus"></i></button>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+{{else}}    
+    <h2>No hay favoritos</h2>
+{{/if}}

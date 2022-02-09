@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #424243; 
+    max-width: 1440px;
+    margin: 0 auto;
+    min-width: 320px;
+}

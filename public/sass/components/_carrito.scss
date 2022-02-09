@@ -1,0 +1,95 @@
+.section-carrito {
+    padding: 4em 2em;
+    font-size: 14px;
+    user-select: none;
+    overflow-y: auto;
+    display: none;
+    position: fixed;   
+    z-index: 1;
+    top: 150px;
+    left: 50px;
+    right: 50px;
+    bottom: 100px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    @media (max-width: 768px) {
+        left: 20px;
+        right: 20px;        
+    }
+
+    &--visible {
+        display: block;
+    }
+
+    .carrito-cerrar {        
+        position: fixed;
+        top: 20px;
+        right: 25px;
+        cursor: pointer;
+        i {
+            font-size: 20px;
+        }
+    }
+
+    table {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    table,th,td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px 15px;
+    }
+
+    table button {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 50px;
+        height: 35px;
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .carrito-final {
+        // border: 1px solid palegreen;
+        display: flex;
+        justify-content: space-between;  
+        margin: 40px 0;   
+    }
+    
+    .totales {
+        // border: 1px dashed black; 
+        display: flex;  
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;        
+    }
+
+    .totales span {
+        font-weight: bold;        
+        font-size: 16px;        
+    }
+
+    .totales button {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+        font-weight: bold;          
+    }
+
+    button.btn__enviarCarrito {
+        float: right;
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+        font-weight: bold;    
+    }
+
+}
+
+

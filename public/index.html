@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/log.ico"> 
+    <link rel="stylesheet" href="css/fontello.css">  
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Connecticus</title>
+
+</head>
+<body>
+
+    <header class="main-header">
+            
+        <div class="header-login">
+            <a class="header-login__link" href="#"><i class="icon-user-2"></i> Iniciar sesión</a>
+        </div>
+
+        <div class="header-logo">
+            <span class="header-logo__grande">connecticus</span>
+            <span class="header-logo__chico">cnns</span>
+        </div>
+
+        <div class="header-search-bar__oculto">
+            <form class="header-search-bar__oculto-form">
+                <input class="campo-busqueda" id="busqueda" type="search">
+                <button><i class="icon-search-1"></i></button>
+            </form>
+        </div>        
+
+        <div class="header-search-bar">
+            <div class="header-search-bar__content">
+                <form class="header-search-bar__content-form">
+                    <input class="campo-busqueda" type="search">
+                    <button><i class="icon-search-1"></i></button>
+                </form>
+
+                <div class="header-links">
+                    <div class="header-favoritos">
+                        <div><i class="icon-heart"></i></div>                
+                    </div>
+                    
+                    <div class="header-carrito">                
+                        <div><i class="icon-basket"></i></div>                
+                    </div>  
+                </div>
+            </div>
+
+            <div class="header-toggle">
+                <div class="hamburger hamburger--3dx">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </div>
+            </div>            
+        </div>
+
+        <div class="nav-bar">
+            <ul class="nav-bar__nav-list"> 
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link active" href="" id="home">Inicio</a>
+                </li>               
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link active" href="" id="inicio">Productos</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link active" href="" id="alta">Alta</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link active" href="" id="contacto">Contacto</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link active" href="" id="nosotros">Nosotros</a>
+                </li>                
+            </ul>
+        </div>
+
+    </header>
+
+    <!-- --------- VISTA DEL CARRITO ----------- -->
+    <div class="section-favoritos"></div>
+    <!-- --------------------------------------- -->
+
+    <!-- --------- VISTA DEL CARRITO ----------- -->
+    <div class="section-carrito"></div>
+    <!-- --------------------------------------- -->
+
+    <main></main>
+    
+    <footer>
+        <form class="footer-newsletter" action="newsletter.php" method="post">
+            <label class="footer-newsletter__label" for="newsletter"><i class="icon-mail"> No te pierdas nada!</i></label>
+            <div class="footer-newsletter__search">
+                <input class="campo-email" type="email" id="newsletter">
+                <input class="boton-enviar" type="submit">
+            </div>
+        </form>
+
+        <div class="footer-content">
+            
+            <div class="footer-content__la-empresa">
+
+                <div class="acordeon-item"> 
+                    <h2 class="acordeon-title">LA EMPRESA</h2>
+                    <div class="acordeon-content">
+                        <p><a href="" id="trabaja-con-nosotros">Trabaja con nosotros</a></p>
+                        <p><a href="" id="terminos-y-condiciones" >Terminos y condiciones</a></p>
+                        <p><a href="" id="politicas-de-privacidad">Politicas de privacidad</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-content__ayuda">
+
+                <div class="acordeon-item">
+                    <h2 class="acordeon-title">AYUDA</h2>
+                    <div class="acordeon-content">
+                        <p><a href="" id="preguntas-frecuentes">Preguntas frecuentes</a></p>
+                        <p><a href="" id="me-arrepenti">Me arrepenti</a></p>
+                    </div>
+                </div> 
+        
+            </div>
+
+            <div class="footer-content__medios-de-pago">
+
+                <div class="acordeon-item">
+                    <h2 class="acordeon-title">MEDIOS DE PAGO</h2>
+                    <div class="acordeon-content">
+                        <p>Tarjetas de credito</p>
+                        <p>Tarjetas de debito</p>
+                        <p>Efectivo</p>
+                    </div>
+                </div>     
+            
+            </div>
+                
+            <div class="footer-content__contacto">
+
+                <div class="acordeon-item acordeon-item--open">
+                    <h2 class="acordeon-title">CONTACTO</h2>
+                    <div class="acordeon-content">
+                        <p>Telefono</p>
+                        <p>Mail</p>
+                        <p><i class="icon-location">Donde estamos</i></p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26262.861330223463!2d-58.3816796!3d-34.633037!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334ccee26fc95%3A0x2edeeb69361bc460!2sParque%20Lezama!5e0!3m2!1ses!2sar!4v1642873141414!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>   
+            
+            </div>
+        </div>
+
+        <div class="footer-final">
+            <div class="footer-final__copyright">
+                <span><i class="icon-github-squared"></i> Jimena-Videla</span> 
+            </div>
+            
+            <div class="footer-final__logo">
+                <span class="footer-final__logo-grande">connecticus</span>
+                <span class="footer-final__logo-chico">cnns</span>
+            </div>
+
+            <div class="footer-final__redes">                
+                <a href="#"><i class="icon-facebook-squared"></i></a>
+                <a href="#"><i class="icon-pinterest-squared"></i></a>
+                <a href="#"><i class="icon-linkedin-squared"></i></a>
+                <a href="#"><i class="icon-twitter-squared"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        
+        /* ------------------- Header Toggle --------------------- */
+        
+        var hamburger = document.querySelector(".hamburger");    
+        var toggle = document.getElementsByClassName('nav-bar')[0]    
+        
+        hamburger.addEventListener("click", function() {
+            
+            hamburger.classList.toggle("is-active");       
+            
+            toggle.classList.toggle('nav-bar--open')
+            
+        });
+
+        /* ------------------- Footer --------------------- */
+
+        var elemtsItem = document.getElementsByClassName('acordeon-item')
+        var elemtsContent = document.getElementsByClassName('acordeon-content')
+
+        for (var unItem of elemtsItem) {
+        
+            unItem.addEventListener('click', function () {
+                // this.innerHTML = 'hola'
+                // this.style.textAlign = 'center'
+                // elemtsContent[0].style.display = 'block'
+                this.classList.toggle('acordeon-item--open')                
+            })
+        }    
+
+    </script>
+
+    <!-- Código de librerías -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- clientes http -->
+    <script src="js/clientes/http.client.js"></script>
+
+    <!-- servicios -->
+    <script src="js/servicios/producto.js"></script>
+    <script src="js/servicios/carrito.js"></script>
+
+    <!-- modelos -->
+    <script src="js/modelos/producto.js"></script>
+    <script src="js/modelos/carrito.js"></script>
+    <script src="js/modelos/favoritos.js"></script>
+
+    <!-- controladores -->
+    <script src="js/controladores/productos.js"></script>
+    <script src="js/controladores/carrito.js"></script>
+    <script src="js/controladores/favoritos.js"></script>
+
+    <!-- menúes -->
+    <script src="js/menu/alta.js"></script>
+    <script src="js/menu/nosotros.js"></script>
+    <script src="js/menu/contacto.js"></script>
+    <script src="js/menu/inicio.js"></script>
+    <script src="js/menu/carrito.js"></script>
+    <script src="js/menu/favoritos.js"></script>
+    <script src="js/menu/home.js"></script>
+
+    <!-- Código de arranque -->
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>

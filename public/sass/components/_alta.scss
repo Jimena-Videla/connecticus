@@ -1,0 +1,338 @@
+.main__alta {
+    margin: 1.5em 0 1em;
+    background-image: linear-gradient(135deg, #00DBDE 0%, #FC00FF 100%);
+    padding: 2em;
+    font-family: 'Poppins', sans-serif;
+    
+    .container-alta {    
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        min-width: 320px;
+
+        .form-container__alta-producto {
+            // border: 1px solid gold;
+            width: 90%;
+            margin: 40px auto;            
+            max-width: 768px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px; 
+        
+            h1 {
+                // border: 1px dashed red;
+                color: white;
+                font-family: 'ConnectedHollow';
+                font-weight: 100;                  
+            }
+
+            h1,
+            .campo-nombre,
+            .campo-descripcion,
+            .campo-detalles,
+            .campo-foto {    
+                grid-column-start: 1;
+                grid-column-end: 3;
+                display: flex;
+                flex-direction: column; 
+                gap: 5px;               
+            }
+
+            .campo-nombre label, 
+            .campo-descripcion label, 
+            .campo-precio label, 
+            .campo-stock label, 
+            .campo-marca label, 
+            .campo-categoria label, 
+            .campo-detalles label, 
+            .campo-foto label {
+                font-size: 14px;                
+            }
+
+            .campo-foto label i {
+                color: blueviolet;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            
+            .campo-nombre input,
+            .campo-descripcion textarea,
+            .campo-precio input,
+            .campo-stock input, 
+            .campo-marca select, 
+            .campo-categoria select,
+            .campo-detalles textarea {
+                width: 100%;
+                box-sizing: border-box;
+                background-color: transparent;
+                padding: 10px;                
+                outline: none;
+                border: 1px solid white;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+            }
+
+            .campo-precio,
+            .campo-stock,
+            .campo-marca,
+            .campo-categoria {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;  
+            }        
+            
+            .campo-descripcion textarea,
+            .campo-detalles textarea {
+                resize: vertical;
+                min-height: 100px;
+                max-height: 200px;                
+            }
+
+            .campo-nombre input::placeholder,
+            .campo-descripcion textarea::placeholder,
+            .campo-precio input::placeholder,
+            .campo-stock input::placeholder,
+            .campo-detalles textarea::placeholder {
+                color: rgba(255, 255, 255, 0.61);
+            }
+
+            .campo-nombre input:focus,
+            .campo-descripcion textarea:focus,
+            .campo-precio input:focus,
+            .campo-stock input:focus,
+            .campo-marca select:focus,
+            .campo-categoria select:focus,
+            .campo-detalles textarea:focus {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+
+            .campo-nombre input:focus::placeholder,
+            .campo-descripcion textarea:focus::placeholder,
+            .campo-precio input:focus::placeholder,
+            .campo-stock input:focus::placeholder,
+            .campo-detalles textarea:focus::placeholder {
+                color: rgba(76, 52, 214, 0.582);
+            }            
+
+            .mensaje-alta {
+                color: white;
+                font-size: 12px;       
+            }
+
+            /* --------- Drop area --------- */
+
+            #drop-area {                
+                border: 2px dashed white;
+                background-color: rgba(255, 255, 255, 0.4);
+                // border-radius: 20px;
+                width: 200px;
+                height: 200px;
+                margin: 10px 0;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;                
+                transition: background-color 0.3s linear;
+                // padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                z-index: 10;            
+            }
+                        
+            #drop-area::after {
+                content: 'Arrastre y suelte sus archivos aquí';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                font-size: 14px;
+                color: rgba(76, 52, 214, 0.582);
+                text-align: center;
+            }
+
+
+            #foto {
+                display: none;
+            }
+        
+            #gallery img {            
+                width: 100%;                 
+                position: relative; 
+                z-index: 50;
+            }
+
+            #drop-area.highlight {
+                background-color: rgba(124, 111, 238, 0.712);
+            }
+            
+            /* ---------------------------- */
+
+            .checks {
+                display: flex;
+                flex-direction: column; 
+                gap: 5px;  
+
+                .campo-oferta,
+                .campo-envio {
+                    // border: 1px solid blue;
+                    font-size: 14px;                    
+                }
+                
+                h2 {
+                    // border: 1px solid green;
+                    font-size: 10px;    
+                    font-weight: bold; 
+                    margin-top: 10px;           
+                }                
+            }
+        
+            .alta-submit {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .boton-alta-enviar {
+                align-self: flex-end;                
+                font-family: 'Poppins', sans-serif;             
+                background-color: rgba(255, 255, 255, 0.6);
+                border: 1px solid white;  
+                color: black;
+                width: 150px; 
+                padding: 5px 10px;
+                font-size: 14px;
+                text-align: center; 
+                cursor: pointer;                
+            }
+
+            .boton-alta-enviar:disabled {
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                background-color: rgba(255, 255, 255, 0.2);
+                cursor: no-drop;
+            }   
+
+        }
+
+    }
+        
+    .listado {
+        color: white;
+        font-size: 20px;       
+        font-weight: 100;
+        margin: 20px 0;            
+    }
+    
+    #listado-productos {
+        // border: 1px dashed lightgreen;
+        width: 100%;      
+
+        table {
+            border: 1px solid rgb(255, 255, 255);
+            width: 100%;
+            font-size: 10px; 
+            @media (max-width: 768px) {
+                border: none;
+            }                
+        }
+
+        table, td {            
+            border-collapse: collapse;
+            padding: 5px;    
+            @media (max-width: 768px) {                
+                display: block;
+                text-align: right;                
+            }         
+        }
+
+        th {
+            border: 1px solid rgb(255, 255, 255);
+            color: white;
+            font-weight: 100;
+            text-transform: uppercase;
+            background-color: rgba(255, 255, 255, 0.6);
+            @media (max-width: 768px) {            
+                display: none;                            
+            }
+        }
+
+        td {
+            border: 1px solid rgb(255, 255, 255);
+            position: relative;
+            @media (max-width: 768px) {                
+                padding-left: 20%;                    
+                
+                &::before {
+                    content: attr(data-label);
+                    color: white;                   
+                    text-transform: uppercase;
+                    position: absolute;
+                    left: 5px;                    
+                }
+            }   
+        }
+
+
+        tr {            
+            @media (max-width: 768px) {           
+                // border: 20px solid blueviolet;
+                // background: rgba(255, 255, 255, 0.6);
+                &:nth-child(odd) {                    
+                    border: 20px solid transparent;                    
+                    background: rgba(255, 255, 255, 0.6);                    
+                }  
+                &:nth-child(even) {
+                    border: 20px solid transparent;   
+                }
+            }            
+        }
+            
+        img {
+            width: 50px;            
+            display: block;
+            margin: 0 auto;        
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            @media (max-width: 768px) {
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+        }
+
+        button {
+            align-self: flex-end;                
+            font-family: 'Poppins', sans-serif;             
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid white;  
+            color: black;
+            width: 50px; 
+            padding: 5px;
+            font-size: 8px;
+            text-align: center; 
+            cursor: pointer;  
+        }
+
+        .disabled {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.2);
+            cursor: no-drop;
+        } 
+        
+    }               
+
+}
+
+

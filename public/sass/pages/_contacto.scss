@@ -1,0 +1,99 @@
+.main__contacto {
+    margin: 1.5em 0 1em;
+    background-image: linear-gradient(135deg, #00DBDE 0%, #FC00FF 100%);
+    padding: 2em;
+    font-family: 'Poppins', sans-serif;  
+
+    .container-contacto {
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        min-width: 320px;
+
+        
+        .form-container__contacto {
+            // border: 1px solid gold;
+            width: 90%;
+            margin: 40px auto;            
+            max-width: 768px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;  
+                
+            h1 {
+                // border: 1px dashed red;
+                color: white;
+                font-family: 'ConnectedHollow';
+                font-weight: 100;                  
+            }
+
+            h1,
+            .campo-nombre-contacto,
+            .campo-apellido-contacto,
+            .campo-email-contacto,
+            .campo-comentarios-contacto,
+            .botones-contacto {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                display: flex;
+                flex-direction: column; 
+                gap: 5px;
+            }
+
+            .campo-nombre-contacto label,
+            .campo-apellido-contacto label,
+            .campo-email-contacto label,
+            .campo-comentarios-contacto label {
+                font-size: 14px;
+            }
+                
+            .campo-nombre-contacto input,
+            .campo-apellido-contacto input,
+            .campo-email-contacto input,
+            .campo-comentarios-contacto textarea {
+                width: 100%;
+                box-sizing: border-box;
+                background-color: transparent;
+                padding: 10px;                
+                outline: none;
+                border: 1px solid white;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+            }    
+            
+            .campo-nombre-contacto input:focus,
+            .campo-apellido-contacto input:focus,
+            .campo-email-contacto input:focus,
+            .campo-comentarios-contacto textarea:focus {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+            
+            .campo-comentarios-contacto textarea {
+                    resize: vertical;
+                    min-height: 100px;
+                    max-height: 200px;
+            }
+
+            .botones-contacto {
+                flex-direction: row-reverse;
+                gap: 10px;
+                margin: 30px 0 0;
+                .boton-contacto-enviar,
+                .boton-contacto-restablecer { 
+                    font-family: 'Poppins', sans-serif;             
+                    background-color: rgba(255, 255, 255, 0.6);
+                    border: 1px solid white;
+                    color: black;
+                    width: 150px; 
+                    padding: 5px 10px;
+                    font-size: 14px;
+                    text-align: center; 
+                    cursor: pointer;           
+                }
+            }
+        }
+    }    
+}
